@@ -156,6 +156,7 @@ namespace GitLab.TeamFoundation
 
                 try
                 {
+                    _web 
                     var projects = _web.GetProjects();
                     foreach (var project in projects)
                     {

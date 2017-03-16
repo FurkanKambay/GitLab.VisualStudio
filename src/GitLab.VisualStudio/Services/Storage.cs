@@ -1,4 +1,5 @@
 ﻿using GitLab.VisualStudio.Shared;
+using Microsoft.VisualStudio.Shell;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -152,16 +153,37 @@ namespace GitLab.VisualStudio.Services
                 using (var reader = new JsonTextReader(new StreamReader(_path)))
                 {
                     var serializer = new JsonSerializer();
-
                     o = (JObject)serializer.Deserialize(reader);
-
-                    var token = o["User"];
-                    if (token != null)
+                    if (GitLabPackage.DTE != null && string.IsNullOrEmpty(GitLabPackage.GetActiveFilePath()))
                     {
-                        _user = token.ToObject<User>();
+                        using (var git = new GitAnalysis(GitLabPackage.GetActiveFilePath()))
+                        {
+                            if (git.IsDiscoveredGitRepository)
+                            {
+                                git.GetRepoUrlRoot();
+                                var token = o["User"];
+                                if (token != null)
+                                {
+                                    _user = token.ToObject<User>();
 
-                        _user.Token = GetToken();
+                                    _user.Token = GetToken();
+                                }
+                            }
+
+                        }
                     }
+                    else
+                    {
+                        var token = o["User"];
+                        if (token != null)
+                        {
+                            _user = token.ToObject<User>();
+
+                            _user.Token = GetToken();
+                        }
+                    }
+
+                
                 }
             }
         }

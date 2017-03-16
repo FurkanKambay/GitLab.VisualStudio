@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.Shell;
+﻿using EnvDTE;
+using EnvDTE80;
+using Microsoft.VisualStudio.Shell;
 using System;
 using System.Runtime.InteropServices;
 
@@ -14,8 +16,26 @@ namespace GitLab.VisualStudio
     {
         public GitLabPackage()
         {
-
+            _dte = this.GetService(typeof(DTE)) as DTE2;
         }
-    
+
+        private static DTE2 _dte;
+
+        internal static DTE2 DTE
+        {
+            get
+            {
+                return _dte;
+            }
+        }
+
+        static public string GetActiveFilePath()
+        {
+            // sometimes, DTE.ActiveDocument.Path is ToLower but GitHub can't open lower path.
+            // fix proper-casing | http://stackoverflow.com/questions/325931/getting-actual-file-name-with-proper-casing-on-windows-with-net
+            var path = OpenOnGitLab.GetExactPathName(DTE.ActiveDocument.Path + DTE.ActiveDocument.Name);
+            return path;
+        }
+
     }
 }
