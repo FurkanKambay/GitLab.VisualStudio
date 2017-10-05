@@ -1,18 +1,20 @@
-## The easiest way to connect to your GitHub repositories in Visual Studio
+## The easiest way to connect to your GitLab repositories in Visual Studio
 
 ### Visual Studio    |   Marketplace
-Click [GitLab Extension for VisualStudio](https://marketplace.visualstudio.com/items?itemName=MysticBoy.GitLabExtensionforVisualStudio) to download!
+ [GitLab Extension for VisualStudio](https://marketplace.visualstudio.com/items?itemName=MysticBoy.GitLabExtensionforVisualStudio)  
 	
 ### BUG And Issues
 https://gitlab.com/maikebing/GitLab.VisualStudio/issues
+
 or 
+
 https://github.com/maikebing/GitLab.VisualStudio/issues
  
 ### Thanks
  
 GitHub Extension for Visual Studio
   
-[CodeCloud Extension for  Visual Studio](https://gitee.com/GitGroup/CodeCloud.VisualStudio_
+[CodeCloud Extension for  Visual Studio](https://gitee.com/GitGroup/CodeCloud.VisualStudio)
 
 [Visual Studio Extension for opening files on GitHub.com](https://github.com/neuecc/Open-on-GitHub)
 
