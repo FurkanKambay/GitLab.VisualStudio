@@ -2,7 +2,7 @@ baseurl = "https://visualstudio.gitclub.cn/"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
-title = "GitLab.VisualStudio"
+title = "GitLab  Extension for Visual Studio"
 canonifyurls  = true
 
 DefaultContentLanguage = "en"
@@ -14,7 +14,7 @@ pygmentCodeFences = true
 #googleAnalytics = "XXX"
 
 [Params]
-  subtitle = "GitLab.VisualStudio"
+  subtitle = "V1.0.0.78"
   logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
@@ -55,7 +55,7 @@ pygmentCodeFences = true
 
 
 [[menu.main]]
-    name = "Blog"
+    name = "Overview"
     url = ""
     weight = 1
 
@@ -65,29 +65,28 @@ pygmentCodeFences = true
     weight = 3
 
 [[menu.main]]
-    identifier = "samples"
-    name = "Samples"
+    identifier = "Links"
+    name = "Links"
     weight = 2
 
 [[menu.main]]
-    parent = "samples"
-    name = "Big Image Sample"
-    url = "post/2017-03-07-bigimg-sample"
+    parent = "Links"
+    name = "BUG And Issues"
+    url = "https://gitlab.com/maikebing/GitLab.VisualStudio/issues"
     weight = 1
 
 [[menu.main]]
-    parent = "samples"
-    name = "Math Sample"
-    url = "post/2017-03-05-math-sample"
+    parent = "Links"
+    name = "Visual Studio | Marketplace"
+    url = "https://marketplace.visualstudio.com/items?itemName=MysticBoy.GitLabExtensionforVisualStudio"
     weight = 2
-
 [[menu.main]]
-    parent = "samples"
-    name = "Code Sample"
-    url = "post/2016-03-08-code-sample"
+    parent = "Links"
+    name = "About author"
+    url = "https://github.com/maikebing"
     weight = 3
-
+ 
 [[menu.main]]
-    name = "Tags"
-    url = "tags"
+    name = "release-notes"
+    url = "release-notes"
     weight = 3
