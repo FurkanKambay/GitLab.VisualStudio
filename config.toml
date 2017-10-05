@@ -37,21 +37,21 @@ pygmentCodeFences = true
   name = "maikebing"
   email = "100860505@qq.com"
   facebook = "mikebing"
-  googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
+  #googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
   gitlab = "maikebing"
   github = "maikebing"
   twitter = "maikebing"
-  reddit = "username"
-  linkedin = "username"
-  xing = "username"
-  stackoverflow = "users/XXXXXXX/username"
-  snapchat = "username"
+  #reddit = "username"
+  #linkedin = "username"
+ # xing = "username"
+  stackoverflow = "users/7779862/mysticboy"
+  #snapchat = "username"
   instagram = "username"
-  youtube = "user/username" # or channel/channelname
-  soundcloud = "username"
-  spotify = "username"
-  bandcamp = "username"
-  itchio = "username"
+  #youtube = "user/username" # or channel/channelname
+  #soundcloud = "username"
+  #spotify = "username"
+  #bandcamp = "username"
+  #itchio = "username"
 
 
 [[menu.main]]
