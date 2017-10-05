@@ -1,8 +1,8 @@
-baseurl = "https://pages.gitlab.io/hugo/"
+baseurl = "https://visualstudio.gitclub.cn/"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
-title = "Beautiful Hugo"
+title = "GitLab.VisualStudio"
 canonifyurls  = true
 
 DefaultContentLanguage = "en"
@@ -14,7 +14,7 @@ pygmentCodeFences = true
 #googleAnalytics = "XXX"
 
 [Params]
-  subtitle = "Hugo Blog Template for GitLab Pages"
+  subtitle = "GitLab.VisualStudio"
   logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
@@ -34,13 +34,13 @@ pygmentCodeFences = true
 #  desc = "Hexagon"
 
 [Author]
-  name = "Some Person"
-  email = "youremail@domain.com"
-  facebook = "username"
+  name = "maikebing"
+  email = "100860505@qq.com"
+  facebook = "mikebing"
   googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
-  gitlab = "username"
-  github = "username"
-  twitter = "username"
+  gitlab = "maikebing"
+  github = "maikebing"
+  twitter = "maikebing"
   reddit = "username"
   linkedin = "username"
   xing = "username"
