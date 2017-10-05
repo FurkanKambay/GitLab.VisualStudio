@@ -17,7 +17,7 @@ pygmentCodeFences = true
   subtitle = "Create value faster with the only integrated product for the whole software development lifecycle."
   logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
-  dateFormat = "January 2, 2006"
+  dateFormat = "January 1, 2017"
   commit = false
   rss = true
   comments = true
@@ -36,7 +36,7 @@ pygmentCodeFences = true
 [Author]
   name = "maikebing"
   email = "100860505@qq.com"
-  facebook = "mikebing"
+  facebook = "maikebing"
   #googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
   gitlab = "maikebing"
   github = "maikebing"
