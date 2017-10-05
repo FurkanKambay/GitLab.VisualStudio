@@ -1,65 +1,81 @@
-# GitLab  Extension for Visual Studio
+![Build Status](https://gitlab.com/pages/hugo/badges/master/build.svg)
 
-You can log any of your favorite GitLab servers and start your great job!
+---
 
-The GitLab Extension for Visual Studio provides GitLab integration in Visual Studio 2015.
-Most of the extension UI lives in the Team Explorer pane, which is available from the View menu.
+Example [Hugo] website using GitLab Pages.
 
+Learn more about GitLab Pages at https://pages.gitlab.io and the official
+documentation https://docs.gitlab.com/ce/user/project/pages/.
 
-## What't new ?
+---
 
-#### V1.0.0.70
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-1. GitLab login information associated with the solution, easy to switch GitLab server.
-2. Enter the password and press enter to login GitLab server.
-3. Now, We can login   with two  factor authentication.just enter the personal access token into the password field.
+- [GitLab CI](#gitlab-ci)
+- [Building locally](#building-locally)
+- [GitLab User or Group Pages](#gitlab-user-or-group-pages)
+- [Did you fork this project?](#did-you-fork-this-project)
+- [Troubleshooting](#troubleshooting)
 
-#### V1.0.0.58 
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-1. Support for Visual Studio 2017 
-2. Fix bus.
+## GitLab CI
 
+This project's static Pages are built by [GitLab CI][ci], following the steps
+defined in [`.gitlab-ci.yml`](.gitlab-ci.yml).
 
-#### V1.0.0.40 
- 1. Right click on editor, if repository is hosted on GitLab Server , you can jump to master/current branch/current revision's blob page and blame/commits page. If selecting line(single, range) in editor, jump with line number fragment.
- 2. Fix [#4](https://www.gitlab.com/maikebing/GitLab.VisualStudio/issues/4) [#5](https://www.gitlab.com/maikebing/GitLab.VisualStudio/issues/5) [#6](https://www.gitlab.com/maikebing/GitLab.VisualStudio/issues/6)
-Official builds of this extension are available at [the official website](http://visualstudio.gitclub.cn).
+## Building locally
 
-### HomePage
- http://visualstudio.gitclub.cn/
+To work locally with this project, you'll have to follow the steps below:
 
-### BUG And Issues
-https://gitlab.com/maikebing/GitLab.VisualStudio/issues
-or 
-https://github.com/maikebing/GitLab.VisualStudio/issues
+1. Fork, clone or download this project
+1. [Install][] Hugo
+1. Preview your project: `hugo server`
+1. Add content
+1. Generate the website: `hugo` (optional)
 
-###    Visual Studio    |   Marketplace
-https://marketplace.visualstudio.com/items?itemName=MysticBoy.GitLabExtensionforVisualStudio
+Read more at Hugo's [documentation][].
 
-### Thanks
- 
-####  GitLab Extension for Visual Studio
-  
-####  CodeCloud Extension for  Visual Studio
+### Preview your site
 
-https://gitee.com/GitGroup/CodeCloud.VisualStudio
+If you clone or download this project to your local computer and run `hugo server`,
+your site can be accessed under `localhost:1313/hugo/`.
 
-#### Visual Studio Extension for opening files on GitHub.com
-https://github.com/neuecc/Open-on-GitHub 
+The theme used is adapted from http://themes.gohugo.io/beautifulhugo/.
 
- 
+## GitLab User or Group Pages
 
+To use this project as your user/group website, you will need one additional
+step: just rename your project to `namespace.gitlab.io`, where `namespace` is
+your `username` or `groupname`. This can be done by navigating to your
+project's **Settings**.
 
-### Open On GitHub 
+You'll need to configure your site too: change this line
+in your `config.toml`, from `"https://pages.gitlab.io/hugo/"` to `baseurl = "https://namespace.gitlab.io"`.
+Proceed equaly if you are using a [custom domain][post]: `baseurl = "http(s)://example.com"`.
 
-![image](./docs/images/OpenOnGitLab.png)
-###  Team Home Page
+Read more about [user/group Pages][userpages] and [project Pages][projpages].
 
-![image](./docs/images/TeamHome.PNG)
+## Did you fork this project?
 
-### Team Connct Page
-![image](./docs/images/TeamConnect.PNG)
- 
- 
-[![image](http://s07.flagcounter.com/map/7uzT/size_s/txt_000000/border_CCCCCC/pageviews_0/viewers_0/flags_0/)](http://info.flagcounter.com/7uzT)
+If you forked this project for your own use, please go to your project's
+**Settings** and remove the forking relationship, which won't be necessary
+unless you want to contribute back to the upstream project.
 
+## Troubleshooting
+
+1. CSS is missing! That means two things:
+
+    Either that you have wrongly set up the CSS URL in your templates, or
+    your static generator has a configuration option that needs to be explicitly
+    set in order to serve static assets under a relative URL.
+
+[ci]: https://about.gitlab.com/gitlab-ci/
+[hugo]: https://gohugo.io
+[install]: https://gohugo.io/overview/installing/
+[documentation]: https://gohugo.io/overview/introduction/
+[userpages]: http://doc.gitlab.com/ee/pages/README.html#user-or-group-pages
+[projpages]: http://doc.gitlab.com/ee/pages/README.html#project-pages
+[post]: https://about.gitlab.com/2016/04/07/gitlab-pages-setup/#custom-domains
