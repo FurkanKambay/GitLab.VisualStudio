@@ -87,6 +87,6 @@ pygmentCodeFences = true
     weight = 3
  
 [[menu.main]]
-    name = "release-notes"
-    url = "release-notes"
+    name = "Release Notes"
+    url = "page/release-notes"
     weight = 3
